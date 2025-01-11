@@ -3,12 +3,6 @@ src="$HOME/Wallpapers"
 tar="/usr/share/hypr"
 cfg="$HOME/.config/Himapaper.conf"
 vim $cfg
-#sudo rm $tar/wall0.png
-#sudo rm $tar/wall1.png
-#sudo rm $tar/wall2.png
-#sudo ln -s $src/$(head -1 $cfg | tail -1) $tar/wall0.png
-#sudo ln -s $src/$(head -2 $cfg | tail -1) $tar/wall1.png
-#sudo ln -s $src/$(head -3 $cfg | tail -1) $tar/wall2.png
 for i in 0 1 2; do
   sudo rm $tar/wall$i.png
   sudo ln -s $src/$(head -$(($i + 1)) $cfg | tail -1) $tar/wall$i.png
