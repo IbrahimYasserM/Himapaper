@@ -5,8 +5,9 @@ fast and optimized wallpaper utility for Hyprland
 - place `Wallpapers` directory in your home directory
 - place Himapaper file in `~/.local/bin/` directory and make sure it is executable
 - make sure `~/.local/bin/` is added to your `$PATH`
+- make sure to add `exec-once = $HOME/.local/bin/Himapaper` to your hyprland configration
 - reboot
 ## Usage
-Just run Himapaper from your terminal then write the choosen 3 wallpaper names then save and close the file.
+Just add your wallpaper names to `~/.config/Himapaper.conf`
 ## Adding new wallpapers
 Just add it to Wallpapers directory in your home and make sure they are in `png` format.
