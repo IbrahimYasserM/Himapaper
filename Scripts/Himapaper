@@ -1,0 +1,9 @@
+#!/bin/bash
+src="$HOME/Wallpapers"
+tar="$HOME/.config/Himapaper"
+cfg="$HOME/.config/Himapaper/Himapaper.conf"
+nm=$(cat $cfg | wc -w)
+random=$(od -vAn -N2 -tu2 < /dev/urandom)
+rd=$((random % nm))
+rm $tar/wall.png
+ln -s $src/$(head -$(($rd + 1)) $cfg | tail -1) $tar/wall.png

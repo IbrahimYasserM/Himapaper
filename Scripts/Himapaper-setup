@@ -1,0 +1,12 @@
+#!/bin/bash
+ch=$(ls /usr/local/share | grep hypr)
+if [[ -z "$ch" ]]; then
+    tar="/usr/share/hypr"
+else
+    tar="/usr/local/share/hypr"
+fi
+src="$HOME/.config/Himapaper"
+for i in 0 1 2; do
+    sudo rm $tar/wall$i.png
+    sudo ln -s $src/wall.png $tar/wall$i.png
+done
